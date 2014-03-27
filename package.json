@@ -1,0 +1,17 @@
+{
+  "name": "my-cms",
+  "version": "0.1.0",
+  "author": "jack cai",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-jasmine": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-cssmin": "~0.8.0",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "~0.1.0",
+    "grunt-autoprefixer": "~0.7.2"
+  }
+}

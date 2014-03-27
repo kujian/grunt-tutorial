@@ -1,0 +1,161 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "compass/css3";
+@import "_base";
+::placeholder{
+	color:#333;
+}
+a{
+	@include transition-property(all);
+	@include transition-duration(2s);
+}
+body{
+	background:#EEEFF1;
+}
+h1,h2,h3,h4,h5,h6{color:#666565;}
+/*header*/
+.header{
+	background:#2A2C2E;
+	padding:20px 0;
+	a{
+		color:#B5BDC0;
+		&:hover{
+			color:#fff;
+			text-decoration:none;
+		}
+	}
+}
+.logo{float:left; font-size:20px;}
+.nav{float:right; font-size:16px;}
+.nav li{margin-left:10px;}
+/*main*/
+.inner{width:960px; margin:0 auto; zoom:1;}
+.inner:before,.inner:after{display:table; content:"";}
+.inner:after{clear:both;}
+.main{margin:20px 0;}
+.content{float:left; width:100%; }
+.left-primary{margin-right:300px; background:#fff;}
+.content-header{padding:5px 10px; line-height:24px; background:#F7F7F7; border-bottom:1px solid #ddd;}
+.content-list{padding:10px;}
+.entry-title{
+	font-size:14px;
+	margin-bottom:10px;
+	padding:5px 10px;
+	background:#EDF0F2;
+	position:relative;
+	@include transition-property(all);
+	&:before{
+		position:absolute;
+		content:'-';
+		right:10px;
+		top:5px;
+		font-size:20px;
+		color:#333;
+	}
+	&:hover{
+		background:darken(#EDF0F2, 2%);
+		text-decoration:none;
+	}
+	a{
+		background:url(../images/icon.png) no-repeat 0 4px;
+		line-height:30px;
+		padding:0 10px 0 30px;
+		color:#666565;
+		display:inline-block;
+		*display:inline;
+		*zoom:1;
+	}
+}
+.entry-meta,.entry-content{
+	padding:5px 10px;
+	margin-bottom:5px;
+}
+.entry-meta:hover,.entry-content:hover{
+	background:#f8f8f8;
+}
+.entry-meta .muted{margin-right:10px;}
+
+/*pagination*/
+.pagination{text-align:center; padding-bottom:20px;
+	a, span{
+		padding:3px 6px; border:1px solid #ddd; background:#EDF0F2; margin:0 4px; color:#666565; border:1px solid #EDF0F2; 
+		@include border-radius(4px,4px); 
+		@include transition-property(background);
+	}
+	a:hover{
+		background:darken(#EDF0F2,10%); text-decoration:none;
+	}
+}
+/*sidebar*/
+.sidebar{float: left; margin-left:-290px; width:290px;}
+.widget{
+	margin-bottom:10px;
+	background:#fff;
+}
+.widget-header{
+	background:#F7F7F7;
+	padding:5px 10px;
+	line-height:24px;
+	border-bottom:1px solid #ddd;
+	position:relative;
+	&:before{
+		position:absolute;
+		right:10px;
+		top:5px;
+		content:'-';
+		font-size:20px;
+		color:#333;
+	}
+	&:hover{
+		background:darken(#F7F7F7,5%);
+		cursor:pointer;
+	}
+}
+.open-content:before{
+	content:'+';
+	z-index:2;
+}
+.widget-title{font-size:14px; line-height:24px;}
+.widget{
+	ul{
+		padding:5px 0;
+		li{
+			padding-left:10px;
+			line-height:30px;
+			&:hover{
+				background:#f8f8f8;
+			}
+			a:hover{
+				text-decoration:none;
+			}
+		}
+	}
+	.tagcolud{
+		padding:10px;
+		a{
+			margin-bottom:4px;
+		}
+	}
+}
+/*footer*/
+.footer{
+	background:#2A2C2E;
+	color:#8e999d;
+	font-size:12px;
+	padding:25px 0;
+}
+.copyright{float:left; width:400px;}
+.nav-page{
+	float:left; width:200px; line-height:24px;
+	li{
+		margin-right:20px;
+	}
+	a{
+		color:#8e999d;
+		&:hover{
+			color:#fff;
+		}
+	}
+}
